@@ -2,7 +2,7 @@
 
 这是一个基于 [Typst](https://typst.app/) 和 [Tufted](https://github.com/vsheg/tufted) 的静态网站构建模板，手把手教你搭建简洁、美观的个人博客、作品集和简历设计。
 
-![Tufted website](https://github.com/Yousa-Mirage/Tufted-Blog-Template/blob/main/concent/imgs/devices.webp)
+![Tufted website](content/imgs/devices.webp)
 
 ## ✨ 特点
 
