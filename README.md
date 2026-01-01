@@ -109,8 +109,6 @@ make build
 
 ### 3. 本地预览
 
-如果你安装了 uv，你可以在终端中运行以下命令启动本地预览服务器（这个命令使用 uv 运行了一个叫做 livereload 的工具，livereload 将 `_site/` 目录作为网站根目录，并在本地的 8000 端口启动 HTTP 实时服务器）：
-
 > HTTP 服务器会占用当前终端窗口，因此推荐在该路径下打开一个新的终端窗口运行预览命令。
 
 你可以运行以下命令启动本地预览服务器：
@@ -127,7 +125,7 @@ python build.py preview
 
 `preview` 会首先尝试运行 `uvx livereload _site`，这个命令使用 uv 运行了一个叫做 livereload 的工具，livereload 将 `_site/` 目录作为网站根目录，并在本地的 8000 端口启动 HTTP 实时服务器。如果你没有安装 uv，则会回退到使用 Python 内置的 HTTP 服务器：`python -m http.server 8000 --directory _site`。
 
-预览服务器默认使用 8000 端口，你可以使用 `-p/--port` 参数指定其他端口，例如：
+预览服务器默认使用 `8000` 端口，你可以使用 `-p/--port` 参数指定其他端口，例如：
 ```bash
 uv run build.py preview -p 12345
 ```
