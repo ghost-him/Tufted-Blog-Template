@@ -8,21 +8,23 @@
 
 - 🚀 使用 Typst 编写内容，简洁强大，编译极快
 - 🎨 基于 Tufte CSS 设计，极简主义、内容至上，提供清晰、沉浸的阅读体验
-- 📦 内置基于 Python 的跨平台构建脚本，新手友好，支持增量编译
+- 📦 内置基于 Python 的跨平台构建脚本，支持增量编译
 - 📝 支持生成 HTML 网页和 PDF 文档，支持链接到 PDF
 - 🌐 内置 GitHub Pages 部署支持，一键发布网站
+- 📄 丰富的示例和文档，无需任何前置知识，简单学习 Typst 后即可开始编写
 
 ## 📦 环境准备（仅需一次）
 
-> 如果你是纯小白用户，这部分可能会涉及到一些你从未接触到的新概念，甚至可能会第一次接触到终端和命令行，不要害怕，本项目提供了详细的文档帮助你上手。  
-> 遇到不懂的概念或不会的操作，多问 AI 多搜索。如果遇到问题，欢迎在 [Issue](https://github.com/Yousa-Mirage/Tufted-Blog-Template/issues) 中提问和反馈。
+> 如果你是纯萌新，这部分可能会涉及到一些你从未接触到的新概念，甚至可能会第一次接触到终端和命令行，不要害怕，本项目提供了[详细的文档](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki)帮助你上手。  
+> 遇到不懂的概念或不会的操作，多问 AI 多搜索。如果遇到任何问题，欢迎在 [Issue](https://github.com/Yousa-Mirage/Tufted-Blog-Template/issues) 和 [Discussions](https://github.com/Yousa-Mirage/Tufted-Blog-Template/discussions) 中提问和反馈。
 
 本项目只依赖 Typst 和 Python 环境（推荐使用 uv 工具）。Typst 用于将 `.typ` 文件编译为 HTML 和 PDF，Python 脚本用于自动化构建流程。
 
 ### 0. 事前准备
 
-为了进行版本管理、自动构建和拥有更好的编写体验，建议你自行设置这些项目：
+为了进行版本管理、自动构建和拥有更好的编写体验，建议你自行准备这些项目：
 
+- 了解什么是终端，能够在终端中运行命令（可参考 [Wiki 页](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/%E7%BB%88%E7%AB%AF%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%AF%E5%BE%84)）
 - 拥有一个 GitHub 账号，从而使用 GitHub Action 和 GitHub Pages 进行免费网站构建和部署，你将拥有一个免费的 `<your-github-username>.github.io` 域名作为你的网站地址
 - 安装 Git 进行版本管理，以及将项目推送到 GitHub 仓库以运行自动构建和部署
 - 使用 [VS Code](https://code.visualstudio.com/) 或其他你喜欢的代码编辑器，并安装 [Tinymist](https://github.com/Myriad-Dreamin/tinymist) 插件以获得 Typst 语言支持
@@ -31,19 +33,21 @@
 
 > 如果你的系统已经安装 Typst CLI，也可以跳过这一步。
 
-Typst 是一种用于排版文档的标记语言，Typst 编译器读取并解释带有标记的 `.typ` 文本文件，将这些文本文件编译为 PDF/HTML 文档。本项目基于 Typst 实验性的 HTML 导出功能构建网页。我们要下载的便是 Typst 编译器。
+Typst 是一种用于排版文档的标记语言，Typst 编译器读取带有标记的 `.typ` 文本文件，将这些文本文件编译为 PDF/HTML 文档。本项目基于 Typst 实验性的 HTML 导出功能构建网页。
 
-- **方法 1（推荐）：从 [Typst 下载页面](https://typst.app/open-source/#download)直接下载可执行程序。** 你需要下载压缩文件，并将其解压到一个位于 `PATH` 环境变量中的文件夹中。
-    - Windows 用户可将其解压到 `D:\typst\` 或你喜欢的其他路径，然后将该路径添加到 `PATH` 环境变量中，具体操作可询问 AI。
-    - macOS / Linux 用户可将其解压到 `/usr/local/bin` 或其他已添加到 `PATH` 的目录中，具体操作可询问 AI。
+我们要下载的便是 Typst 编译器。
+
+- **方法 1：从 [Typst 下载页面](https://typst.app/open-source/#download)直接下载可执行程序。** 你需要下载压缩文件，并将其解压到一个位于 `PATH` 环境变量中的文件夹中。
+    - (**推荐**) Windows 用户可将其解压到 `D:\typst\` 或你喜欢的其他路径，然后将该路径添加到 `PATH` 环境变量中，具体操作可见 [Wiki 页](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/PATH-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F)。
+    - macOS / Linux 用户可将其解压到 `/usr/local/bin` 或其他已添加到 `PATH` 的目录中，具体操作可见 [Wiki 页](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/PATH-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F)。
 - **方法 2：使用包管理器安装。**
     - Windows：
         - 使用 winget：`winget install typst`
         - 使用 Scoop：`scoop install typst`
         - 使用 Chocolatey：`choco install typst`
-    - macOS：
+    - macOS (**推荐**)：
         - 使用 Homebrew：`brew install typst`
-    - Linux 使用你常用的包管理器安装。
+    - Linux 使用你常用的包管理器安装 (**推荐**)。
 
 完成后打开终端，输入并运行 `typst --version`，如果显示版本号则表示安装成功。
 
@@ -183,7 +187,7 @@ Tufted-Blog-Template/
 - 增加 Python 构建脚本，从而支持跨平台构建
 - 增加 PDF 构建支持，允许编译 PDF 文档并链接到网页
 - 增加了网站标签页图标支持
-- 添加了详细的使用说明和代码注释，帮助用户快速上手
+- 添加了详细的使用说明和代码注释，帮助用户快速开发
 
 本模板项目基于 [MIT License](https://github.com/Yousa-Mirage/Tufted-Blog-Template/blob/main/LICENSE) 开源。
 

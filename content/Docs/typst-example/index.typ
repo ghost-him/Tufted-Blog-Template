@@ -10,6 +10,23 @@
 
 这份文档展示了 Typst 的核心功能。上方是实际渲染效果，下方灰色背景的代码块是对应的源代码。
 
+#note-box[
+  本文档不是一份详细的 Typst 教程。本文档的目的是展示各种 Typst 元素在当前模板下的渲染效果，顺带展示写法。
+  
+  如果你之前从未接触过 Typst 和标记语言，推荐你阅读下列 Typst 教程来学习：
+  
+  - #link("https://typst-doc-cn.github.io/tutorial/")[*Typst 中文教程（小蓝书）*]
+    - 强烈建议至少学习 `导引`、`1. 标记模式`、`2. 脚本模式` 三节，这会让你了解 Typst 的基本编写模式，能够完全理解本文档的内容，并且能够编写自己的 Typst 文档（足以使用以下展示的内容构建网站）。
+  - #link("https://typst-doc-cn.github.io/guide/word.html")[*面向 Word 用户的快速入门向导*]
+    - 建议阅读学习，能够了解和 Word 等排版软件的差异，并进一步了解 Typst 的用法
+  - #link("https://typst-doc-cn.github.io/guide/FAQ.html")[Typst 常见问题]
+  - #link("https://typst-doc-cn.github.io/docs/")[Typst 中文文档]
+  - #link("https://typst.app/docs/")[Typst 官方文档]
+  - #link("https://typst.app/universe/")[Typst Universe - 大量第三方包和模板]
+  
+  学习完前两个资料后，你应该就了解了什么是 Typst，也能够看懂接下来的所有内容并将其应用到你自己的文档中了。对于本模板用户来说，你不需要了解什么高级用法，只要学习到能看懂下列代码和 `content/` 中的 `.typ` 文档，你就可以开始编写你自己的网站了。
+]
+
 == 1. 字体与文本修饰
 
 这里展示了 *粗体*、_斜体_、#underline[下划线]、#strike[删除线]、#overline[上划线]、上标 E=mc#super[2]、下标 H#sub[2]O。重要内容可以使用 #highlight[高亮标记]。
@@ -57,18 +74,19 @@
 
 == 3. 链接
 
-但你可以创建编译为 PDF 的 Typst 文档，并链接到编译的 PDF 文件。你可以使用 `#link()` 函数添加链接。
-
-例如，#link("https://github.com/Yousa-Mirage")[这是一个外部网页的链接]。\
-#link("https://yousa-mirage.github.io/", "这也是一个外部链接")。\
-你也可以链接到本网站的其他位置，例如#link("sample-PDF.pdf")[这是一个指向 PDF 文档的链接]，这个 PDF 由名为 `sample-PDF.typ` 的文件编译而来。你可以通过这种方式展现带有复杂格式的 PDF 文档，例如插入你的 PDF 版简历。\
-#link("/CV/")[而这是一个指向本网站 CV 页的链接。]
-
+你可以使用 `#link()` 函数添加链接，例如：
+- #link("https://github.com/Yousa-Mirage")[这是一个外部网页的链接]。
+- #link("https://yousa-mirage.github.io/", "这也是一个外部链接")。
+- 你也可以链接到本网站的其他位置，例如：
+  - #link("sample-PDF.pdf")[这是一个指向 PDF 文档的链接]。你可以创建编译为 PDF 的 Typst 文档，例如这个 PDF 由名为 `sample-PDF.typ` 的文件编译而来。你可以链接到编译的 PDF 文件，从而展示带有复杂格式的 PDF 文档，比如 PDF 版简历。
+  - #link("/CV/")[而这是一个指向本网站 CV 页的链接。]
+  
 ```typ
-例如，#link("https://github.com/Yousa-Mirage")[这是一个外部网页的链接]。\
-#link("https://yousa-mirage.github.io/", "这也是一个外部链接")。\
-你也可以链接到本网站的其他位置，例如#link("sample-PDF.pdf")[这是一个指向 PDF 文档的链接]，这个 PDF 由名为 `sample-PDF.typ` 的文件编译而来。\
-#link("/CV/")[而这是一个指向本网站 CV 页的链接。]
+- #link("https://github.com/Yousa-Mirage")[这是一个外部网页的链接]。
+- #link("https://yousa-mirage.github.io/", "这也是一个外部链接")。
+- 你也可以链接到本网站的其他位置，例如：
+  - #link("sample-PDF.pdf")[这是一个指向 PDF 文档的链接]。
+  - #link("/CV/")[而这是一个指向本网站 CV 页的链接。]
 ```
 
 
@@ -263,12 +281,14 @@ HTML 导出还不支持调整列宽、表格样式等，甚至目前连边框都
 
 使用 ```` ``` ```` 包裹代码来添加代码块，支持语法高亮，也可以和图片、表格一样使用 `figure()` 添加标题。我修改了代码块样式，并添加了行号和复制按钮。
 
-```python
-# Python 中的斐波那契函数
-def fib(n):
-    if n <= 1: return n
-    return fib(n-1) + fib(n-2)
-```
+#figure(caption: "我会 Python。")[
+  ```python
+  # Python 中的斐波那契函数
+  def fib(n):
+      if n <= 1: return n
+      return fib(n-1) + fib(n-2)
+  ```
+]
 
 #figure(caption: "我最近在学习 Rust。")[
   ```rs
@@ -299,7 +319,6 @@ def fib(n):
 
 #quote-box[
   这是一个引用块。你可以在这里引用相当长的内容。你可以在这里引用相当长的内容。你可以在这里引用相当长的内容。你可以在这里引用相当长的内容。支持换行、分段，甚至可以在其中添加新的引用块。
-
   #quote-box[这是引用块内部的引用块。]
   - 列表
   `This is a code block.`
@@ -315,7 +334,6 @@ def fib(n):
 
 #quote-box[
   这是一个引用块。你可以在这里引用相当长的内容。你可以在这里引用相当长的内容。你可以在这里引用相当长的内容。你可以在这里引用相当长的内容。支持换行、分段，甚至可以在其中添加新的引用块。
-
   #quote-box[这是引用块内部的引用块。]
   - 列表
   `This is a code block.`
@@ -334,13 +352,13 @@ def fib(n):
 Typst 使用 `$ $`包裹公式。行内公式嵌入在文字中，写法是 `$ $` 内紧跟公式内容，例如 $f(x) = x^2$。
 
 ```typ
-例如 $f(x) = x^2$。
+$f(x) = x^2$
 ```
 
 而块级公式独占一行，写法是 `$ $` 与公式内容之间存在空格，例如 $ A = pi r^2 $
 
 ```typ
-例如 $ A = pi r^2 $。
+$ A = pi r^2 $
 ```
 
 包含分式、根号、求和与积分：
@@ -348,7 +366,6 @@ $ integral_0^infinity e^(-x^2) d x = sqrt(pi) / 2 $
 $ sum_(k=0)^n k = 1 + ... + n = (n(n+1)) / 2 $
 
 ```typ
-包含分式、根号、求和与积分：
 $ integral_0^infinity e^(-x^2) d x = sqrt(pi) / 2 $
 $ sum_(k=0)^n k = 1 + ... + n = (n(n+1)) / 2 $
 ```
@@ -362,7 +379,6 @@ $
 $
 
 ```typ
-矩阵与行列式：
 $
   mat(
     1, 2;
@@ -372,17 +388,21 @@ $
 ```
 
 多行对齐公式：
-$
-  f(x) & = (x + 1)^2 \
-       & = x^2 + 2x + 1
-$
+
+#figure(caption: "多行对齐公式")[
+  $
+    f(x) & = (x + 1)^2 \
+         & = x^2 + 2x + 1
+  $
+]
 
 ```typ
-多行对齐公式：
-$
-  f(x) & = (x + 1)^2 \
-       & = x^2 + 2x + 1
-$
+#figure(caption: "多行对齐公式")[
+  $
+    f(x) & = (x + 1)^2 \
+         & = x^2 + 2x + 1
+  $
+]
 ```
 
 更加复杂的公式和符号写法可参考#link("https://typst-doc-cn.github.io/docs/reference/math/")[官方文档]。
@@ -445,6 +465,7 @@ Typst 不但是一个标记排版语言，还是一门编程排版语言：
 #import "@preview/mitex:0.2.6": *
 
 // 这个 scope 是必要的
+// 参见 https://typst.app/universe/package/cmarker#resolving-paths-correctly
 #let scope = (image: (source, alt: none, format: auto) => figure(image(source, alt: alt, format: format)))
 #let md-content = read("tufted-titmouse.md")
 #cmarker.render(md-content, math: mitex, scope: scope)
@@ -455,3 +476,5 @@ Typst 不但是一个标记排版语言，还是一门编程排版语言：
 #let scope = (image: (source, alt: none, format: auto) => figure(image(source, alt: alt, format: format)))
 #let md-content = read("tufted-titmouse.md")
 #cmarker.render(md-content, math: mitex, scope: scope)
+
+`"tufted-titmouse.md"` 渲染完毕。
