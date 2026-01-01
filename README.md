@@ -23,10 +23,10 @@
 
 ### 0. 事前准备
 
-为了进行版本管理、自动构建和拥有更好的编写体验，建议你自行准备这些项目：
+为了进行版本管理、自动构建和拥有更好的编写体验，建议准备好这些项目：
 
+- 拥有一个 GitHub 账号
 - 了解什么是终端，能够在终端中运行命令（可参考 [Wiki 页](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/%E7%BB%88%E7%AB%AF%E4%B8%8E%E5%B7%A5%E4%BD%9C%E8%B7%AF%E5%BE%84)）
-- 拥有一个 GitHub 账号，从而使用 GitHub Actions 和 GitHub Pages 进行网站构建和部署
 - 安装 Git 以进行代码管理和远程推送（可参考 [Wiki 页](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/Git-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97)）
 - 使用 [VS Code](https://code.visualstudio.com/) 或其他你喜欢的代码编辑器，并安装 [Tinymist](https://github.com/Myriad-Dreamin/tinymist) 插件以获得 Typst 语言支持（可参考 [Wiki 页](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/Typst-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E8%B5%84%E6%96%99)）
 
