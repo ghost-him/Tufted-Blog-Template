@@ -2,6 +2,8 @@
 
 这是一个基于 [Typst](https://typst.app/) 和 [Tufted](https://github.com/vsheg/tufted) 的静态网站构建模板，手把手教你搭建简洁、美观的个人网站、博客和简历设计。
 
+如果你想快速体验网站样式效果，可以访问 [tufted.vsheg.com](https://tufted.vsheg.com/) 或 [我的个人网站](https://yousa-mirage.github.io)。
+
 ![Tufted website](content/imgs/devices.webp)
 
 > 如果你是纯萌新，很可能会遇到一些新概念，可能会第一次使用终端和命令行，别害怕，本项目不需要你有任何前置知识，十分友好。  
@@ -91,10 +93,6 @@ GitHub Actions 自动部署
   ↓
 访问 username.github.io
 ```
-
-### 0. 快速体验
-
-如果你想快速体验网站样式效果，可以直接访问 [tufted.vsheg.com](https://tufted.vsheg.com/) 或 [我的个人网站](https://yousa-mirage.github.io)。
 
 ### 1. 克隆项目
 
