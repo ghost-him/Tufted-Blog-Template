@@ -1,6 +1,6 @@
 #import "../index.typ": template, tufted
 #import "@preview/lilaq:0.5.0" as lq
-#show: template
+#show: template.with(lang: "en")
 
 
 = The Normal Distribution

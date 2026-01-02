@@ -1,7 +1,7 @@
 #import "../index.typ": template, tufted
 #show: template.with(title: "Blog")
 
-= Blog
+= 博客 / Blog
 
 == 2025
 

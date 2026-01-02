@@ -15,7 +15,7 @@
   The tufted duck (_Aythya fuligula_) is a medium-sized diving duck native to Eurasia. Known for its diving ability, it can plunge to great depths to forage for food.
 ]
 
-= Tufted Blog Template/ Tufted 博客模板
+= Tufted 博客模板
 
 这是一个基于 #link("https://typst.app/")[Typst] 和 #link("https://github.com/vsheg/tufted")[Tufted] 的静态网站构建模板，手把手教你搭建简洁、美观的个人博客、作品集和简历设计。
 
@@ -31,35 +31,6 @@
 
 #link("https://edwardtufte.github.io/tufte-css/")[*Tufte 样式*] 源于数据可视化大师 Edward Tufte#footnote[爱德华·罗尔夫·塔夫特（生于1942年3月14日），常被称为“ET”，是美国统计学家，耶鲁大学政治学、统计学与计算机科学荣休教授。他因在信息设计领域的著述和作为数据可视化领域的先驱而闻名。] 的设计理念，主张“内容至上”与极简主义，力求去除一切干扰信息的视觉杂音。
 
-#link("https://edwardtufte.github.io/tufte-css/")[The *Tufte style*] originates from the design philosophy of data visualization master _Edward Tufte_#footnote[Edward Rolf Tufte (/ˈtʌfti/; born March 14, 1942), sometimes known as "ET", is an American statistician and professor emeritus of political science, statistics, and computer science at Yale University. He is noted for his writings on information design and as a pioneer in the field of data visualization.], advocating for a "content-first" approach and minimalism while striving to eliminate all visual noise that distracts from the information.
+#link("https://edwardtufte.github.io/tufte-css/")[*The Tufte style*] originates from the design philosophy of data visualization master _Edward Tufte_#footnote[Edward Rolf Tufte (/ˈtʌfti/; born March 14, 1942), sometimes known as "ET", is an American statistician and professor emeritus of political science, statistics, and computer science at Yale University. He is noted for his writings on information design and as a pioneer in the field of data visualization.], advocating for a "content-first" approach and minimalism while striving to eliminate all visual noise that distracts from the information.
 
-其最鲜明的特点是采用*宽大的侧边栏布局*，将注释、参考文献和图表直接并排展示在正文旁，取代了传统的脚注或尾注，配合优雅的*衬线字体*与*类纸张背景*，在数字屏幕上复刻了经典学术著作般清晰、沉浸且图文对照的深度阅读体验。
-
-我对原本的样式进行了修改，使其适配中文和中英文混合排版，同时重点优化了代码块样式：
-
-#figure(caption: "代码块示例")[
-  ```rust
-  use std::sync::{Arc, Mutex};
-  use std::thread;
-
-  fn main() {
-      let counter = Arc::new(Mutex::new(0));
-      let mut handles = vec![];
-
-      for _ in 0..10 {
-          let counter = Arc::clone(&counter);
-          let handle = thread::spawn(move || {
-              let mut num = counter.lock().unwrap();
-              *num += 1;
-          });
-          handles.push(handle);
-      }
-
-      for handle in handles {
-          handle.join().unwrap();
-      }
-
-      println!("Final Count: {}", *counter.lock().unwrap());
-  }
-  ```
-]
+其最鲜明的特点是采用*宽大的侧边栏布局*，将注释、参考文献和图表直接并排展示在正文旁，取代了传统的脚注或尾注，配合优雅的*衬线字体*与*类纸张背景*，在数字屏幕上复刻了如经典学术著作般清晰、优雅、沉浸的深度阅读体验。
