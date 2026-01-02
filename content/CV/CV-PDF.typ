@@ -1,16 +1,12 @@
-#import "../index.typ": template, tufted
-#show: template.with(title: "Edward R. Tufte")
 #import "@preview/citegeist:0.2.0": load-bibliography
+#set page(height: auto)
+#show link: it => underline(it)
 
-= Edward R. Tufte
+= Edward R. Tufte: #text(weight: "regular", size: 0.9em)[Statistician, Artist, and Professor Emeritus]
 
-#tufted.margin-note[
-  Statistician, Artist, and Professor Emeritus \
-  Website: #link("https://www.edwardtufte.com")[edwardtufte.com] \
-  Email: #link("mailto:noreply@edwardtufte.com", "noreply@edwardtufte.com")
-]
-
-#link("CV-PDF.pdf")[[PDF version is available! Click me!]]
+Website: #link("https://www.edwardtufte.com")[edwardtufte.com]
+#h(3em)
+Email: #link("mailto:noreply@edwardtufte.com", "noreply@edwardtufte.com")
 
 Research in statistical evidence and analytical design for information visualization, integrating principles from statistics, graphic design, and cognitive science for the effective presentation of quantitative data.
 
@@ -22,12 +18,11 @@ Research in statistical evidence and analytical design for information visualiza
 
 == Artworks
 
-#tufted.margin-note[
-  #image("escaping-flatland.webp")
-]
-
-#tufted.margin-note[
-  A homage to Edward R. Tufte's large stainless steel sculpture titled _Escaping Flatland_
+#figure(
+  caption: [A homage to Edward R. Tufte's large stainless steel sculpture titled _Escaping Flatland_],
+  numbering: none,
+)[
+  #image("escaping-flatland.webp", height: 150pt)
 ]
 
 Founder of Hogpen Hill Farms, a 234-acre sculpture park in Woodbury, Connecticut. Creator of large-scale works including _Larkin’s Twig_ and the _Escaping Flatland_ series, exhibited at the Aldrich Contemporary Art Museum.
@@ -55,7 +50,6 @@ Development of sparklines, a method for embedding high-resolution data graphics 
     - #data.author, "#data.title," #emph(data.journal), #data.year. DOI: #link(data.url)[#data.doi]
   ]
 }
-
 
 == Education
 
