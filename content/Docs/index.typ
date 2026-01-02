@@ -3,13 +3,7 @@
 
 = 文档 / Docs
 
-== Basic
-
-- #link("01-quick-start/", "Quick Start")
-- #link("02-configuration/", "Configuration")
-- #link("03-styling/", "Styling")
-- #link("04-deploy/", "Deployment")
-
-== 中文帮助文档
-
-- #link("typst-example/", "Typst 文档编写示例")
+- #link("website-config/", "网站配置")
+- #link("typst-example/", "Typst 功能速览与样例")
+- #link("github-deploy/", "GitHub 网站部署")
+- #link("custom-styling/", "自定义样式")

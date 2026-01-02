@@ -4,27 +4,16 @@
 #import "@preview/citegeist:0.2.0": load-bibliography
 #import "@preview/cmarker:0.1.8"
 #import "@preview/mitex:0.2.6": *
-#show: template.with(title: "Typst 文档编写示例")
+#show: template.with(title: "Typst 功能速览与样例")
 
 = Typst 功能速览与样例
 
-这份文档展示了 Typst 的核心功能。上方是实际渲染效果，下方灰色背景的代码块是对应的源代码。
+这份文档展示了 Typst 的功能以及在当前网页模板下的效果。上方是实际渲染效果，下方的代码块是对应的源代码。
 
 #note-box[
-  本文档不是一份详细的 Typst 教程。本文档的目的是展示各种 Typst 元素在当前模板下的渲染效果，顺带展示写法。
+  本文档不是详细的 Typst 教程。本文档的目的是展示各种 Typst 元素在当前模板下的渲染效果，顺带展示写法。
 
-  如果你之前从未接触过 Typst 和标记语言，推荐你阅读下列 Typst 教程来学习：
-
-  - #link("https://typst-doc-cn.github.io/tutorial/")[*Typst 中文教程（小蓝书）*]
-    - 强烈建议至少学习 `导引`、`1. 标记模式`、`2. 脚本模式` 三节，这会让你了解 Typst 的基本编写模式，能够完全理解本文档的内容，并且能够编写自己的 Typst 文档（足以使用以下展示的内容构建网站）。
-  - #link("https://typst-doc-cn.github.io/guide/word.html")[*面向 Word 用户的快速入门向导*]
-    - 建议阅读学习，能够了解和 Word 等排版软件的差异，并进一步了解 Typst 的用法
-  - #link("https://typst-doc-cn.github.io/guide/FAQ.html")[Typst 常见问题]
-  - #link("https://typst-doc-cn.github.io/docs/")[Typst 中文文档]
-  - #link("https://typst.app/docs/")[Typst 官方文档]
-  - #link("https://typst.app/universe/")[Typst Universe - 大量第三方包和模板]
-
-  学习完前两个资料后，你应该就了解了什么是 Typst，也能够看懂接下来的所有内容并将其应用到你自己的文档中了。对于本模板用户来说，你不需要了解什么高级用法，只要学习到能看懂下列代码和 `content/` 中的 `.typ` 文档，你就可以开始编写你自己的网站了。
+  如果你之前从未接触过 Typst 和标记语言，建议先阅读 #link("https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/Typst-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E8%B5%84%E6%96%99")[Wiki 页面] 及其中的资料，进行了解和学习后再来阅读本文档。
 ]
 
 == 1. 字体与文本修饰
@@ -47,16 +36,16 @@
 这是新的一行。
 ```
 
-不过由于编译 HTML 的限制，你目前还不能在网页中改变文字的 #text(fill: blue)[颜色]、#text(size: 14pt)[大小] 或 #text(font: "Liu Jian Mao Cao")[字体]。
+如果要显示特殊字符，需要转义：\* \_ \# \$ \@
 
 ```typ
-不过由于编译 HTML 的限制，你目前还不能在网页中改变文字的 #text(fill: blue)[颜色]、#text(size: 14pt)[大小] 或 #text(font: "Liu Jian Mao Cao")[字体]。
+如果要显示特殊字符，需要转义：\* \_ \# \$ \@
 ```
 
-如果要显示特殊字符，需要转义：\* \_ \# \$ \@
+网站的视觉外观由 CSS 控制，你目前不能在 Typst 中直接改变文字的 #text(fill: blue)[颜色]、#text(size: 14pt)[大小] 或 #text(font: "Liu Jian Mao Cao")[字体] 等样式。
 
 ```typ
-如果要显示特殊字符，需要转义：\* \_ \# \$ \@
+网站的视觉外观由 CSS 控制，你目前不能在 Typst 中直接改变文字的 #text(fill: blue)[颜色]、#text(size: 14pt)[大小] 或 #text(font: "Liu Jian Mao Cao")[字体] 等样式。
 ```
 
 
