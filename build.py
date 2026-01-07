@@ -57,6 +57,7 @@ CONFIG_FILE = Path("config.typ")  # 全局配置文件
 # 需要注入到 HTML <head> 中的标签
 HEAD_INJECTION = (
     '<link rel="icon" href="/assets/favicon.ico">'
+    '<script src="/assets/theme-toggle.js"></script>'
     '<script src="/assets/copy-code.js"></script>'
     '<script src="/assets/line-numbers.js"></script>'
     '<script src="/assets/format-headings.js"></script>'

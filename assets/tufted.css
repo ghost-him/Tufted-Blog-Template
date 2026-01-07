@@ -127,10 +127,14 @@ figure[role="math"] {
     zoom: 1.4;
 }
 
-@media (prefers-color-scheme: dark) {
+/* Dark mode: invert math figures for better contrast */
+html[data-theme="dark"] [role="math"] {
+    filter: invert(1) hue-rotate(180deg);
+}
 
-    /* Invert math figures for better contrast */
-    [role="math"] {
+/* Fallback for system preference when no explicit theme is set */
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) [role="math"] {
         filter: invert(1) hue-rotate(180deg);
     }
 }
