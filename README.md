@@ -41,16 +41,16 @@
 [Typst](https://typst.app/) 是一个新兴的、现代化的标记语言排版系统，旨在成为 LaTeX 的现代化替代品，同时比 LaTeX 更简单易学、编译更快、使用更友好。本项目利用 Typst 实验性的 HTML 导出功能将 `.typ` 纯文本源文件编译为网页。
 
 - **方法 1：从 [Typst 下载页面](https://typst.app/open-source/#download)直接下载可执行程序。** 你需要下载压缩包，并将其解压到一个位于 `PATH` 环境变量中的文件夹中。
-    - Windows 用户 (**推荐**) 可将其解压你喜欢的路径，然后将该路径添加到 `PATH` 环境变量中，具体操作可见 [Wiki 页](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/PATH-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F)。
-    - macOS / Linux 用户可将其解压到 `/usr/local/bin` 或其他已添加到 `PATH` 的目录中，具体操作可见 [Wiki 页](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/PATH-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F)。
+  - Windows 用户 (**推荐**) 可将其解压你喜欢的路径，然后将该路径添加到 `PATH` 环境变量中，具体操作可见 [Wiki 页](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/PATH-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F)。
+  - macOS / Linux 用户可将其解压到 `/usr/local/bin` 或其他已添加到 `PATH` 的目录中，具体操作可见 [Wiki 页](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/PATH-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F)。
 - **方法 2：使用包管理器安装。**
-    - Windows：
-        - 使用 winget：`winget install typst`
-        - 使用 Scoop：`scoop install typst`
-        - 使用 Chocolatey：`choco install typst`
-    - macOS (**推荐**)：
-        - 使用 Homebrew：`brew install typst`
-    - Linux 使用你常用的包管理器安装 (**推荐**)。
+  - Windows：
+    - 使用 winget：`winget install typst`
+    - 使用 Scoop：`scoop install typst`
+    - 使用 Chocolatey：`choco install typst`
+  - macOS (**推荐**)：
+    - 使用 Homebrew：`brew install typst`
+  - Linux 使用你常用的包管理器安装 (**推荐**)。
 
 完成后打开终端，输入并运行 `typst --version`，如果显示版本号则表示安装成功。
 
@@ -63,13 +63,17 @@
 你可以按照下面的说明安装 uv：
 
 - Windows：打开终端，运行以下命令：
+
     ```bash
     powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
     ```
+
 - macOS/Linux：打开终端，运行以下命令：
+
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
+
 - 或使用[官方文档](https://docs.astral.sh/uv/getting-started/installation)提到的其他方法。
 
 安装完成后，你可以在终端中运行 `uv --version` 来验证安装是否成功。一旦 uv 安装成功，你不再需要手动安装 Python、操心环境问题，uv 会搞定一切。
@@ -171,14 +175,14 @@ uv run build.py preview -p 12345
 
 在了解网页结构和如何编写后，你就可以将 `content/` 中的内容替换为你自己的内容，从而搭建你自己的网站。
 
-1.  **修改配置**：编辑 `config.typ` 设置网站标题和导航栏，还可以在 `assets/` 下放置一个 `favicon.ico` 文件作为你网站的标签页图标。
-2.  **添加文章**：在 `content/` 下创建新的 `.typ` 文件，可以参考目前的 `content/` 获得示例。
-3.  **生成 PDF**：如果文件名中包含 `PDF` (如 `CV-PDF.typ`)，构建脚本会自动将其编译为 PDF 文件，此时你可以在网页中添加链接指向该 PDF。
-4.  **部署网站**：在你的 GitHub 仓库中**将 Pages 的 `Build and deployment > Source` 设置为 `GitHub Actions`**，然后将修改后的内容推送到 GitHub，GitHub Actions 会自动构建、部署、更新网站。具体内容可参考 [Wiki 页](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/GitHub-Pages-%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99)。
+1. **修改配置**：编辑 `config.typ` 设置网站标题和导航栏，还可以在 `assets/` 下放置一个 `favicon.ico` 文件作为你网站的标签页图标。
+2. **添加文章**：在 `content/` 下创建新的 `.typ` 文件，可以参考目前的 `content/` 获得示例。
+3. **生成 PDF**：如果文件名中包含 `PDF` (如 `CV-PDF.typ`)，构建脚本会自动将其编译为 PDF 文件，此时你可以在网页中添加链接指向该 PDF。
+4. **部署网站**：在你的 GitHub 仓库中**将 Pages 的 `Build and deployment > Source` 设置为 `GitHub Actions`**，然后将修改后的内容推送到 GitHub，GitHub Actions 会自动构建、部署、更新网站。具体内容可参考 [Wiki 页](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/GitHub-Pages-%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99)。
 
 ## 📂 项目结构
 
-```
+```plaintext
 Tufted-Blog-Template/
 ├── .github/workflows     # GitHub Actions 自动构建、部署
 ├── _site/                # 构建输出目录 (自动生成)
@@ -193,18 +197,6 @@ Tufted-Blog-Template/
 ├── config.typ            # 网站全局配置
 └── Makefile              # Make 构建命令
 ```
-
-## 📋 待办事项
-
-- [x] 优化夜间模式效果
-- [ ] 添加浅色/深色模式切换
-- [ ] 优化移动端代码块宽度
-- [x] 增加英文 README 和文档
-- [ ] 优化公式前后的间距
-- [ ] 优化 FireFox 的公式效果
-- [ ] 添加网页的交叉引用跳转
-- [ ] （参考文献直接显示在侧边栏）
-- [ ] （添加中英文页面切换功能）
 
 ## 🔗 说明
 

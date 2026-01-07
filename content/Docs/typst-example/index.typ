@@ -336,7 +336,7 @@ HTML 导出还不支持调整列宽、表格样式等，甚至目前连边框都
 
 == 10. 数学公式
 
-#quote-box[目前 FireFox 浏览器显示公式可能存在问题。]
+#quote-box[目前 FireFox 浏览器显示公式存在问题。]
 
 Typst 使用 `$ $`包裹公式。行内公式嵌入在文字中，写法是 `$ $` 内紧跟公式内容，例如 $f(x) = x^2$。
 
@@ -462,7 +462,9 @@ Typst 不但是一个标记排版语言，还是一门编程排版语言：
 
 将 `"tufted-titmouse.md"` 渲染为以下内容：
 
-#let scope = (image: (source, alt: none, format: auto) => figure(image(source, alt: alt, format: format)))
+#let scope = (
+  image: (source, alt: none, format: auto) => figure(image(source, alt: alt, format: format)),
+)
 #let md-content = read("tufted-titmouse.md")
 #cmarker.render(md-content, math: mitex, scope: scope)
 

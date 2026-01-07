@@ -9,7 +9,8 @@
     "/Docs/": "Docs",
     "/Blog/": "Blog",
     "/CV/": "CV",
+    "/Changelog/": "Changelog",
   ),
   lang: "zh",
-  title: "Tufted Blog Template",  // 你的网站在浏览器中显示的标题
+  title: "Tufted Blog Template", // 你的网站在浏览器中显示的标题
 )

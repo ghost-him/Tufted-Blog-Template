@@ -41,16 +41,16 @@ To enable version control, automated builds, and a better writing experience, it
 [Typst](https://typst.app/) is an emerging modern markup language typesetting system designed to be a modern alternative to LaTeX, while being simpler to learn, faster to compile, and more user-friendly. This project uses Typst's experimental HTML export feature to compile `.typ` plain text source files into web pages.
 
 - **Method 1: Download the executable directly from the [Typst download page](https://typst.app/open-source/#download).** You need to download the archive and extract it to a folder that is in your `PATH` environment variable.
-    - Windows users (**recommended**) can extract it to a path of your choice, then add that path to the `PATH` environment variable, see [Wiki page](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/PATH-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F) for details.
-    - macOS / Linux users can extract it to `/usr/local/bin` or another directory already added to `PATH`, see [Wiki page](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/PATH-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F) for details.
+  - Windows users (**recommended**) can extract it to a path of your choice, then add that path to the `PATH` environment variable, see [Wiki page](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/PATH-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F) for details.
+  - macOS / Linux users can extract it to `/usr/local/bin` or another directory already added to `PATH`, see [Wiki page](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/PATH-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F) for details.
 - **Method 2: Install using a package manager.**
-    - Windows:
-        - Using winget: `winget install typst`
-        - Using Scoop: `scoop install typst`
-        - Using Chocolatey: `choco install typst`
-    - macOS (**recommended**):
-        - Using Homebrew: `brew install typst`
-    - Linux: Use your usual package manager to install (**recommended**).
+  - Windows:
+    - Using winget: `winget install typst`
+    - Using Scoop: `scoop install typst`
+    - Using Chocolatey: `choco install typst`
+  - macOS (**recommended**):
+    - Using Homebrew: `brew install typst`
+  - Linux: Use your usual package manager to install (**recommended**).
 
 After installation, open a terminal and run `typst --version`. If it displays the version number, the installation was successful.
 
@@ -63,13 +63,17 @@ This project uses a Python script `build.py` to automate the build process. Theo
 You can install uv following the instructions below:
 
 - Windows: Open a terminal and run the following command:
+
     ```bash
     powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
     ```
+
 - macOS/Linux: Open a terminal and run the following command:
+
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
+
 - Or use other methods mentioned in the [official documentation](https://docs.astral.sh/uv/getting-started/installation).
 
 After installation, you can run `uv --version` in the terminal to verify the installation was successful. Once uv is installed, you no longer need to manually install Python or worry about environment issues—uv will handle everything.
@@ -171,14 +175,14 @@ You can refer to the content and resources on the [Wiki page](https://github.com
 
 After understanding the web page structure and how to write, you can replace the content in `content/` with your own content to build your own website.
 
-1.  **Modify Configuration**: Edit `config.typ` to set the website title and navigation bar. You can also place a `favicon.ico` file in `assets/` as your website's tab icon.
-2.  **Add Articles**: Create new `.typ` files in `content/`. You can refer to the current `content/` for examples.
-3.  **Generate PDFs**: If the filename contains `PDF` (e.g., `CV-PDF.typ`), the build script will automatically compile it into a PDF file, and you can add links in the web page pointing to that PDF.
-4.  **Deploy Website**: Configure Pages in your GitHub repository, push the modified content to GitHub, and GitHub Actions will automatically build, deploy, and update the website. For details, see the [Wiki page](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/GitHub-Pages-%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99).
+1. **Modify Configuration**: Edit `config.typ` to set the website title and navigation bar. You can also place a `favicon.ico` file in `assets/` as your website's tab icon.
+2. **Add Articles**: Create new `.typ` files in `content/`. You can refer to the current `content/` for examples.
+3. **Generate PDFs**: If the filename contains `PDF` (e.g., `CV-PDF.typ`), the build script will automatically compile it into a PDF file, and you can add links in the web page pointing to that PDF.
+4. **Deploy Website**: Configure Pages in your GitHub repository, push the modified content to GitHub, and GitHub Actions will automatically build, deploy, and update the website. For details, see the [Wiki page](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/GitHub-Pages-%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99).
 
 ## 📂 Project Structure
 
-```
+```plaintext
 Tufted-Blog-Template/
 ├── .github/workflows     # GitHub Actions for automated build and deployment
 ├── _site/                # Build output directory (auto-generated)
@@ -193,17 +197,6 @@ Tufted-Blog-Template/
 ├── config.typ            # Website global configuration
 └── Makefile              # Make build commands
 ```
-
-## 📋 TODO List
-
-- [x] Optimize dark mode effects
-- [ ] Add light/dark mode toggle
-- [ ] Optimize code block width on mobile
-- [x] Add English README and documentation
-- [ ] Optimize spacing before and after formulas
-- [ ] Add cross-reference navigation for web pages
-- [ ] (Display references directly in the sidebar)
-- [ ] (Add Chinese/English page switching functionality)
 
 ## 🔗 Notes
 
