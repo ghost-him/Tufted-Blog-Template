@@ -13,4 +13,8 @@
   ),
   lang: "zh",
   title: "Tufted Blog Template", // 你的网站在浏览器中显示的标题
+  footer-elements: (
+    "© 2026 Yousa-Mirage",
+    [Powered by #link("https://github.com/Yousa-Mirage/Tufted-Blog-Template")[Tufted-Blog-Template]],
+  ),
 )

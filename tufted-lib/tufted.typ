@@ -29,6 +29,7 @@
     "/assets/line-numbers.js",
     "/assets/format-headings.js",
   ),
+  footer-elements: (),
   content,
 ) = {
   // Apply styling
@@ -68,6 +69,17 @@
         html.article(
           html.section(content),
         )
+
+        // Custom footer elements
+        html.footer({
+          for (i, element) in footer-elements.enumerate() {
+            element
+            // Add line break between elements (but not after the last one)
+            if i < footer-elements.len() - 1 {
+              html.br()
+            }
+          }
+        })
       })
     },
   )
