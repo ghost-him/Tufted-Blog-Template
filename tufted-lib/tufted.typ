@@ -29,6 +29,7 @@
     "/assets/line-numbers.js",
     "/assets/format-headings.js",
   ),
+  header-elements: (),
   footer-elements: (),
   content,
 ) = {
@@ -62,7 +63,20 @@
 
       // Body
       html.body({
-        // Add website header
+        // Custom header elements (site header, not navigation)
+        html.header(
+          class: "site-header",
+          {
+            for (i, element) in header-elements.enumerate() {
+              element
+              if i < header-elements.len() - 1 {
+                html.br()
+              }
+            }
+          },
+        )
+
+        // Add website navigation
         make-header(header-links)
 
         // Main content
@@ -74,7 +88,6 @@
         html.footer({
           for (i, element) in footer-elements.enumerate() {
             element
-            // Add line break between elements (but not after the last one)
             if i < footer-elements.len() - 1 {
               html.br()
             }

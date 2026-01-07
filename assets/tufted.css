@@ -56,8 +56,27 @@ RESPONSIVE LAYOUT
 
 
 /*******************************************************************************
-NAVBAR
+NAVBAR AND HEADER/FOOTER
 *******************************************************************************/
+
+/* Site header and footer should have consistent styling */
+header.site-header,
+footer {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+header.site-header {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.35em;
+}
+
+footer {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
 
 header nav {
     display: flex;
