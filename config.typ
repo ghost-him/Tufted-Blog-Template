@@ -1,4 +1,4 @@
-#import "@preview/tufted:0.1.0"
+#import "tufted-lib/tufted.typ" as tufted
 
 #let template = tufted.tufted-web.with(
   // 你可以在 header-links 中修改网站上方的导航栏都包含哪些页面
