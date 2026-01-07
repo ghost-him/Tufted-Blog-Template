@@ -23,6 +23,12 @@
     "/assets/tufted.css",
     "/assets/custom.css",
   ),
+  icon: "/assets/favicon.ico",
+  js-scripts: (
+    "/assets/copy-code.js",
+    "/assets/line-numbers.js",
+    "/assets/format-headings.js",
+  ),
   content,
 ) = {
   // Apply styling
@@ -41,10 +47,15 @@
         html.meta(charset: "utf-8")
         html.meta(name: "viewport", content: "width=device-width, initial-scale=1")
         html.title(title)
+        html.link(rel: "icon", href: icon)
 
         // Stylesheets
         for (css-link) in css {
           html.link(rel: "stylesheet", href: css-link)
+        }
+
+        for (js-src) in js-scripts {
+          html.script(src: js-src)
         }
       })
 
