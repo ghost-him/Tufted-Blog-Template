@@ -1,6 +1,10 @@
 # Tufted Blog Template
 
-[English](README_en.md) | 中文
+<div align="center">
+
+[简体中文](README.md) | [English](README_en.md)
+
+</div>
 
 这是一个基于 [Typst](https://typst.app/) 和 [Tufted](https://github.com/vsheg/tufted) 的静态网站构建模板，手把手教你搭建简洁、美观的个人网站、博客和简历设计。
 

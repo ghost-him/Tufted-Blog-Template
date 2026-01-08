@@ -1,6 +1,10 @@
 # Tufted Blog Template
 
-English | [中文](README.md)
+<div align="center">
+
+[简体中文](README.md) | [English](README_en.md)
+
+</div>
 
 This is a static website building template based on [Typst](https://typst.app/) and [Tufted](https://github.com/vsheg/tufted), providing step-by-step guidance to build a clean and beautiful personal website, blog, and resume.
 
