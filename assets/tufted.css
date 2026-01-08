@@ -139,6 +139,7 @@ pre {
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     padding: 1em;
+    padding-bottom: 0.5em;
     overflow-x: auto;
     margin-bottom: 1.5em;
     width: 55%;
@@ -158,6 +159,7 @@ pre>code {
     margin-left: 0%;
     background-color: transparent;
     padding: 0;
+    padding-bottom: 0.7em;
     border: none;
 }
 
@@ -469,8 +471,18 @@ figure[role="math"] {
     width: 55%;
     text-align: center;
     margin: 1em 0;
+    padding: 0.5em 0;
     font-size: 1.4em;
     line-height: 1.2;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* Math content wrapper - prevent shrinking */
+figure[role="math"]>* {
+    display: inline-block;
+    min-width: max-content;
+    text-align: center;
 }
 
 figure>figure[role="math"] {
@@ -478,7 +490,17 @@ figure>figure[role="math"] {
     width: 100%;
     text-align: center;
     margin: 0 auto;
+    padding: 0.5em 0;
     max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* Math content wrapper for nested figures */
+figure>figure[role="math"]>* {
+    display: inline-block;
+    min-width: max-content;
+    text-align: center;
 }
 
 /* Inline math - smaller size, aligned with text baseline */
@@ -487,7 +509,6 @@ span[role="math"] {
     vertical-align: baseline;
     margin: 0 0.1em;
 }
-
 
 /*******************************************************************************
 POST TILES
