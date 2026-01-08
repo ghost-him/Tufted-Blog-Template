@@ -1,0 +1,386 @@
+/*******************************************************************************
+THEME CONFIGURATION
+主题配置 - 深色/浅色模式切换
+
+This file contains all styles related to light/dark theme switching.
+*******************************************************************************/
+
+/*******************************************************************************
+LIGHT MODE (explicit override for system dark mode)
+*******************************************************************************/
+
+html[data-theme="light"] {
+    background-color: #fffff8 !important;
+    color: #111 !important;
+}
+
+html[data-theme="light"] body {
+    background-color: #fffff8 !important;
+    color: #111 !important;
+}
+
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3,
+html[data-theme="light"] h4,
+html[data-theme="light"] h5 {
+    color: #111 !important;
+}
+
+html[data-theme="light"] a,
+html[data-theme="light"] a:link,
+html[data-theme="light"] a:visited {
+    color: inherit !important;
+    background-color: transparent !important;
+    text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8 !important;
+    background-image: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor) !important;
+}
+
+html[data-theme="light"] header nav a,
+html[data-theme="light"] header nav a:link,
+html[data-theme="light"] header nav a:visited {
+    text-shadow: none !important;
+    background-image: none !important;
+}
+
+html[data-theme="light"] code {
+    background-color: #f7f7f7 !important;
+    color: inherit !important;
+    border-color: #e7e7e7 !important;
+}
+
+html[data-theme="light"] pre {
+    background-color: #f7f7f7 !important;
+    border-color: #e0e0e0 !important;
+}
+
+html[data-theme="light"] pre>code {
+    color: inherit !important;
+}
+
+html[data-theme="light"] .line-numbers-rows {
+    border-right-color: #ddd !important;
+    color: #aaa !important;
+}
+
+html[data-theme="light"] .copy-button {
+    background-color: #fff !important;
+    color: #666 !important;
+    border-color: #ccc !important;
+}
+
+html[data-theme="light"] .copy-button:hover {
+    background-color: #f0f0f0 !important;
+    color: #333 !important;
+}
+
+html[data-theme="light"] .copy-button.copied {
+    background-color: #e6fffa !important;
+    color: #008000 !important;
+    border-color: #008000 !important;
+}
+
+html[data-theme="light"] table th,
+html[data-theme="light"] table td {
+    border-color: #ccc !important;
+}
+
+html[data-theme="light"] table th,
+html[data-theme="light"] table thead td {
+    background-color: #f5f5f5 !important;
+}
+
+html[data-theme="light"] table tbody tr:nth-child(even) {
+    background-color: #fafafa !important;
+}
+
+html[data-theme="light"] table tbody tr:hover {
+    background-color: #f0f0f0 !important;
+}
+
+html[data-theme="light"] [role="math"] {
+    filter: none !important;
+}
+
+
+/*******************************************************************************
+DARK MODE
+*******************************************************************************/
+
+html[data-theme="dark"] {
+    background-color: #151515 !important;
+    color: #ddd !important;
+}
+
+html[data-theme="dark"] body {
+    background-color: #151515 !important;
+    color: #ddd !important;
+}
+
+html[data-theme="dark"] a,
+html[data-theme="dark"] a:link,
+html[data-theme="dark"] a:visited {
+    color: inherit;
+    background-color: transparent !important;
+    text-shadow: none !important;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5 {
+    color: #eee;
+}
+
+html[data-theme="dark"] code {
+    background-color: #2d2d2d;
+    color: #e8e8e8;
+    border-color: #3d3d3d;
+}
+
+html[data-theme="dark"] pre {
+    background-color: #2d2d2d;
+    border-color: #3d3d3d;
+}
+
+html[data-theme="dark"] pre>code {
+    color: #e8e8e8;
+}
+
+html[data-theme="dark"] .line-numbers-rows {
+    border-right-color: #555;
+    color: #666;
+}
+
+html[data-theme="dark"] .copy-button {
+    background-color: #333;
+    color: #ccc;
+    border-color: #555;
+}
+
+html[data-theme="dark"] .copy-button:hover {
+    background-color: #444;
+    color: #eee;
+}
+
+html[data-theme="dark"] .copy-button.copied {
+    background-color: #1a4d3a;
+    color: #5fda9d;
+    border-color: #5fda9d;
+}
+
+html[data-theme="dark"] div[style*="border-inline-start"] .footnote-ref,
+html[data-theme="dark"] div[style*="border-inline-start"] .marginnote,
+html[data-theme="dark"] div[style*="border-inline-start"] .footnote-ref a {
+    color: #eee !important;
+}
+
+html[data-theme="dark"] table th,
+html[data-theme="dark"] table td {
+    border-color: #444;
+}
+
+html[data-theme="dark"] table th,
+html[data-theme="dark"] table thead td {
+    background-color: #333;
+}
+
+html[data-theme="dark"] table tbody tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+html[data-theme="dark"] table tbody tr:hover {
+    background-color: #383838;
+}
+
+html[data-theme="dark"] [role="math"] {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+
+/*******************************************************************************
+SYSTEM PREFERENCE FALLBACK
+(when no explicit theme is set via data-theme attribute)
+*******************************************************************************/
+
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme]) {
+        background-color: #151515 !important;
+        color: #ddd !important;
+    }
+
+    html:not([data-theme]) body {
+        background-color: #151515 !important;
+        color: #ddd !important;
+    }
+
+    html:not([data-theme]) a,
+    html:not([data-theme]) a:link,
+    html:not([data-theme]) a:visited {
+        color: inherit;
+        background-color: transparent !important;
+        text-shadow: none !important;
+    }
+
+    html:not([data-theme]) h1,
+    html:not([data-theme]) h2,
+    html:not([data-theme]) h3,
+    html:not([data-theme]) h4,
+    html:not([data-theme]) h5 {
+        color: #eee;
+    }
+
+    html:not([data-theme]) code {
+        background-color: #2d2d2d;
+        color: #e8e8e8;
+        border-color: #3d3d3d;
+    }
+
+    html:not([data-theme]) pre {
+        background-color: #2d2d2d;
+        border-color: #3d3d3d;
+    }
+
+    html:not([data-theme]) pre>code {
+        color: #e8e8e8;
+    }
+
+    html:not([data-theme]) .line-numbers-rows {
+        border-right-color: #555;
+        color: #666;
+    }
+
+    html:not([data-theme]) .copy-button {
+        background-color: #333;
+        color: #ccc;
+        border-color: #555;
+    }
+
+    html:not([data-theme]) .copy-button:hover {
+        background-color: #444;
+        color: #eee;
+    }
+
+    html:not([data-theme]) .copy-button.copied {
+        background-color: #1a4d3a;
+        color: #5fda9d;
+        border-color: #5fda9d;
+    }
+
+    html:not([data-theme]) div[style*="border-inline-start"] .footnote-ref,
+    html:not([data-theme]) div[style*="border-inline-start"] .marginnote,
+    html:not([data-theme]) div[style*="border-inline-start"] .footnote-ref a {
+        color: #eee !important;
+    }
+
+    html:not([data-theme]) table th,
+    html:not([data-theme]) table td {
+        border-color: #444;
+    }
+
+    html:not([data-theme]) table th,
+    html:not([data-theme]) table thead td {
+        background-color: #333;
+    }
+
+    html:not([data-theme]) table tbody tr:nth-child(even) {
+        background-color: #2a2a2a;
+    }
+
+    html:not([data-theme]) table tbody tr:hover {
+        background-color: #383838;
+    }
+
+    html:not([data-theme]) [role="math"] {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
+
+
+/*******************************************************************************
+THEME TOGGLE BUTTON (DeepWiki Style)
+*******************************************************************************/
+
+.theme-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.theme-toggle-btn:focus-visible {
+    outline: 2px solid var(--highlight-strong, rgba(128, 128, 128, 0.4));
+    outline-offset: 2px;
+    border-radius: 20px;
+}
+
+.toggle-track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 52px;
+    height: 26px;
+    background: #e4e4e7;
+    border-radius: 13px;
+    padding: 0 4px;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn.is-dark .toggle-track {
+    background: #3f3f46;
+}
+
+.toggle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    z-index: 1;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.toggle-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+.toggle-icon-sun {
+    color: #f59e0b;
+    opacity: 1;
+}
+
+.toggle-icon-moon {
+    color: #6b7280;
+    opacity: 0.5;
+}
+
+.theme-toggle-btn.is-dark .toggle-icon-sun {
+    color: #9ca3af;
+    opacity: 0.5;
+}
+
+.theme-toggle-btn.is-dark .toggle-icon-moon {
+    color: #fbbf24;
+    opacity: 1;
+}
+
+.toggle-thumb {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    left: 3px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-toggle-btn.is-dark .toggle-thumb {
+    transform: translateX(26px);
+}
