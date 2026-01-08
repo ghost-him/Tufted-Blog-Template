@@ -54,12 +54,15 @@
         const button = document.getElementById("theme-toggle");
         if (!button) return;
 
+        // 深色模式显示太阳图标（切换到浅色），浅色模式显示月亮图标（切换到深色）
         if (theme === "dark") {
             button.classList.add("is-dark");
             button.setAttribute("aria-label", "切换到浅色模式");
+            button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm8,24a64,64,0,1,0,64,64A64.07,64.07,0,0,0,128,64ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"></path></svg>`;
         } else {
             button.classList.remove("is-dark");
             button.setAttribute("aria-label", "切换到深色模式");
+            button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256"><path d="M235.54,150.21a104.84,104.84,0,0,1-37,52.91A104,104,0,0,1,32,120,103.09,103.09,0,0,1,52.88,57.48a104.84,104.84,0,0,1,52.91-37,8,8,0,0,1,10,10,88.08,88.08,0,0,0,109.8,109.8,8,8,0,0,1,10,10Z"></path></svg>`;
         }
     }
 
@@ -72,31 +75,13 @@
         applyTheme(newTheme);
     }
 
-    // 创建切换按钮 (DeepWiki 风格)
+    // 创建切换按钮 (DeepWiki 风格 - 单图标按钮)
     function createToggleButton() {
         const button = document.createElement("button");
         button.id = "theme-toggle";
         button.className = "theme-toggle-btn";
         button.type = "button";
         button.setAttribute("aria-label", "切换主题");
-
-        // DeepWiki 风格: 两个图标并排，滑动指示器
-        button.innerHTML = `
-            <span class="toggle-track">
-                <span class="toggle-icon toggle-icon-sun">
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-                        <circle cx="12" cy="12" r="4"></circle>
-                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
-                    </svg>
-                </span>
-                <span class="toggle-icon toggle-icon-moon">
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </span>
-                <span class="toggle-thumb"></span>
-            </span>
-        `;
 
         button.addEventListener("click", toggleTheme);
 
