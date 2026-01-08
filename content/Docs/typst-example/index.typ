@@ -342,19 +342,8 @@
 Typst 使用 `$ $`包裹公式。行内公式嵌入在文字中，写法是 `$ $` 内紧跟公式内容，例如 $f(x) = x^2$。
 
 ```typ
-$f(x) = x^2$
+例如 $f(x) = x^2$。
 ```
-
-$ "块级公式1" A = pi^2 $
-#figure(caption: "块级公式2")[
-  $ E = m c^2 $
-]
-
-#figure(caption: "行内公式")[
-  这是一个包含行内公式 $E = m c^2$ 的段落。
-]
-
-在数学和物理学中，求和和积分是两个最基础的概念。例如，我们常常需要计算一系列数字的平方和，其公式为 $sum_(i=1)^n i^2 = (n(n+1)(2n+1))/6$。这个优雅的结果告诉我们，前 $n$ 个正整数的平方和可以用一个三次多项式 $n(n+1)(2n+1)/6$ 来精确表达。类似地，如果我们想要计算立方和，公式变为 $sum_(i=1)^n i^3 = [(n(n+1))/2]^2$，这更加令人惊讶，因为立方和竟然等于平方和公式的平方！
 
 而块级公式独占一行，写法是 `$ $` 与公式内容之间存在空格，例如 $ A = pi r^2 $
 
@@ -408,6 +397,19 @@ $
   $
 ]
 ```
+
+超长的块级公式（突破屏幕宽度）：
+
+$
+  Psi(x, t) = sum_(n=1)^infinity c_n phi_n(x) e^(-i E_n t / planck) = integral_(-infinity)^(+infinity) tilde(Psi)(k) e^(i k x - i omega(k) t) d k = e^(i (k x - omega t)) + sum_(l=1)^infinity a_l e^(i (k_l x + phi_l - omega_l t))
+$
+
+$
+  cal(L)_(S M) = underbrace(- 1/4 B_(mu nu) B^(mu nu) - 1/8 tr(bold(W)_(mu nu) bold(W)^(mu nu)) - 1/2 tr(bold(G)_(mu nu) bold(G)^(mu nu)), "Gauge Bosons")
+  + underbrace(sum_(j=1)^3 (bar(Q)_(L j) i D slash Q_(L j) + bar(u)_(R j) i D slash u_(R j) + bar(d)_(R j) i D slash d_(R j) + bar(L)_(L j) i D slash L_(L j) + bar(e)_(R j) i D slash e_(R j)), "Fermions Kinetic Terms")
+  + underbrace((D_mu phi)^dagger (D^mu phi) - mu^2 phi^dagger phi - lambda (phi^dagger phi)^2, "Higgs Sector")
+  - underbrace(sum_(i, j=1)^3 (y_(i j)^u bar(Q)_(L i) tilde(phi) u_(R j) + y_(i j)^d bar(Q)_(L i) phi d_(R j) + y_(i j)^e bar(L)_(L i) phi e_(R j) + h.c.), "Yukawa Couplings")
+$
 
 更加复杂的公式和符号写法可参考#link("https://typst-doc-cn.github.io/docs/reference/math/")[官方文档]。
 
