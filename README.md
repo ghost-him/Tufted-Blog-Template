@@ -29,6 +29,7 @@
 - 📦 内置基于 Python 的跨平台构建脚本，支持增量编译
 - 📝 支持生成 HTML 网页和 PDF 文档，支持链接到 PDF
 - 🌐 内置 GitHub Actions 工作流，一键部署网站
+- 🌙 支持浅色/深色模式自动选择和一键切换
 - 📄 丰富的示例和文档，无需任何前置知识，[简单学习 Typst](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/Typst-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E8%B5%84%E6%96%99) 后即可开始编写
 
 ## 📦 环境准备（仅需一次）

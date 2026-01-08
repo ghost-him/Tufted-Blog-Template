@@ -29,6 +29,7 @@ Update log available at [Changelog](https://tufted-blog.pages.dev/Changelog/) .
 - 📦 Built-in cross-platform build script based on Python, supporting incremental compilation
 - 📝 Support for generating both HTML pages and PDF documents, with support for linking to PDFs
 - 🌐 Built-in GitHub Actions workflow for one-click website deployment
+- 🌙 Support light/dark mode automatic selection and one-click switching
 - 📄 Rich examples and documentation, no prior knowledge required, start writing after [learning Typst basics](https://github.com/Yousa-Mirage/Tufted-Blog-Template/wiki/Typst-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E8%B5%84%E6%96%99)
 
 ## 📦 Environment Setup (One-time Only)
