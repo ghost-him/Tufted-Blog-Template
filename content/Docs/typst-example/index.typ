@@ -36,16 +36,20 @@
 这是新的一行。
 ```
 
+目前 `#line()` 函数还不支持 HTML 导出，但可以使用 `#html.hr()` 添加分隔线。
+
+#html.hr()
+
 如果要显示特殊字符，需要转义：\* \_ \# \$ \@
 
 ```typ
 如果要显示特殊字符，需要转义：\* \_ \# \$ \@
 ```
 
-网站的视觉外观由 CSS 控制，你目前不能在 Typst 中直接改变文字的 #text(fill: blue)[颜色]、#text(size: 14pt)[大小] 或 #text(font: "Liu Jian Mao Cao")[字体] 等样式。
+网站的视觉外观由 CSS 控制，你目前不能在 Typst 中直接改变文字的 #text(fill: blue)[颜色]、#text(size: 14pt)[大小] 或 #text(font: "Liu Jian Mao Cao")[字体] 等样式。如需修改，请在 `assets/custom.css` 文件中添加自定义 CSS 样式。
 
 ```typ
-网站的视觉外观由 CSS 控制，你目前不能在 Typst 中直接改变文字的 #text(fill: blue)[颜色]、#text(size: 14pt)[大小] 或 #text(font: "Liu Jian Mao Cao")[字体] 等样式。
+你目前不能在 Typst 中直接改变文字的 #text(fill: blue)[颜色]、#text(size: 14pt)[大小] 或 #text(font: "Liu Jian Mao Cao")[字体] 等样式。
 ```
 
 
@@ -505,10 +509,14 @@ Typst 不但是一个标记排版语言，还是一门编程排版语言：
 
 会将 `"tufted-titmouse.md"` 渲染为以下内容：
 
+#html.hr()
+
 #let scope = (
   image: (source, alt: none, format: auto) => figure(image(source, alt: alt, format: format)),
 )
 #let md-content = read("tufted-titmouse.md")
 #cmarker.render(md-content, math: mitex, scope: scope)
+
+#html.hr()
 
 `"tufted-titmouse.md"` 渲染完毕。

@@ -8,6 +8,7 @@
 - 添加了交叉引用跳转功能
 - 使 footer 始终位于页面底部
 - 优化了表格边框样式，现在会生成美观的 HTML 表格
+- 将 `assets/custom.css` 中的内容完全移动到 `assets/tufted.css`
 
 == 2026-01-07
 
