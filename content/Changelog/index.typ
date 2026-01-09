@@ -8,6 +8,7 @@
 开发中的更新内容将在此记录。
 
 - 将 GitHub Actions 工作流由 Makefile 迁移至 uv
+- 微调了切换按钮的位置
 
 == v0.3.0
 
