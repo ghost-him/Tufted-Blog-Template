@@ -244,13 +244,19 @@ QUOTE BLOCKS
 
 /* Quote blocks with left border */
 div[style*="border-inline-start"] {
-    width: 55%;
+    width: 55% !important;
     font-size: 1.4rem;
     line-height: 2.2rem;
     clear: none;
     margin: 1.5em 0;
     padding-right: 0;
     box-sizing: border-box;
+}
+
+/* Nested quote blocks should take full width of parent */
+div[style*="border-inline-start"] div[style*="border-inline-start"] {
+    width: 100% !important;
+    margin: 0.5em 0;
 }
 
 div[style*="border-inline-start"] p {
@@ -342,7 +348,7 @@ RESPONSIVE LAYOUT
 
     /* Full-width quote blocks on mobile */
     div[style*="border-inline-start"] {
-        width: 100%;
+        width: 100% !important;
     }
 
     /* Full-width code blocks on mobile */
