@@ -41,16 +41,38 @@ svg {
     max-height: 80vh;
 }
 
-/* Constrain images within section to text width unless in fullwidth */
-section>figure:not(.fullwidth)>img,
-section>figure:not(.fullwidth)>svg {
-    max-width: 100%;
+/* 
+   CONTENT ALIGNMENT & CENTERING 
+   Shared logic for images, SVGs, and tables 
+*/
+
+/* 1. Content centered in the main text column (55% width) */
+section>img,
+section>svg,
+section>table {
+    max-width: 55%;
+    position: relative;
+    left: 27.5%;
+    transform: translateX(-50%);
 }
 
-/* Images directly in section (not in figure) should be constrained */
 section>img,
 section>svg {
-    max-width: 55%;
+    display: block;
+}
+
+/* 2. Content centered in figures (100% of figure width) */
+section>figure:not(.fullwidth)>img,
+section>figure:not(.fullwidth)>svg,
+figure table {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section>figure:not(.fullwidth)>img,
+section>figure:not(.fullwidth)>svg {
+    display: block;
 }
 
 /* Fullwidth content */
@@ -284,14 +306,6 @@ table {
     line-height: 1.6;
 }
 
-figure table {
-    width: 100%;
-}
-
-section>table {
-    width: 55%;
-}
-
 table th,
 table td {
     padding: 0.5em 0.8em;
@@ -356,7 +370,15 @@ RESPONSIVE LAYOUT
         width: 100%;
     }
 
-    /* Full-width tables on mobile */
+    /* Full-width tables and images on mobile */
+    section>img,
+    section>svg,
+    section>table {
+        max-width: 100%;
+        left: 0;
+        transform: none;
+    }
+
     section>table {
         width: 100%;
     }

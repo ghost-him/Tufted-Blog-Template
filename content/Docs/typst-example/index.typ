@@ -208,18 +208,14 @@
   #image("../../imgs/tufted-duck-female-with-duckling.webp", width: 250pt)
 ]<鸭鸭>
 
-#figure(caption: "这是只猴！")[
-  #image("../../imgs/gorilla.webp", height: 250pt)
-]
+#image("../../imgs/gorilla.webp", height: 250pt)
 
 ```typ
 #figure(caption: "这也是鸭鸭。")[
   #image("../../imgs/tufted-duck-female-with-duckling.webp", width: 250pt)
 ]
 
-#figure(caption: "这是只猴！")[
-  #image("../../imgs/gorilla.webp", height: 250pt)
-]
+#image("../../imgs/gorilla.webp", height: 250pt)
 ```
 
 
