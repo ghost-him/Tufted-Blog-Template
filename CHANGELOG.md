@@ -4,6 +4,8 @@
 
 开发中的更新内容将在此记录。
 
+- 修复了行内公式会受 `p { text-indent: 2em; }` 影响的问题
+
 ## v0.4.0
 
 - 将 GitHub Actions 工作流由 Makefile 迁移至 uv

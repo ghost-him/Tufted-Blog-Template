@@ -536,6 +536,7 @@ span[role="math"] {
     display: inline-block;
     vertical-align: baseline;
     margin: 0 0.1em;
+    text-indent: 0;
 }
 
 /*******************************************************************************
