@@ -29,10 +29,12 @@ body {
 /* Main content fills remaining space */
 body>article {
     flex: 1 0 auto;
+    padding: 4.5rem 0 1.5rem;
 }
 
 /* Footer stays at bottom */
 body>footer {
+    margin-top: auto;
     flex-shrink: 0;
 }
 
