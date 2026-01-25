@@ -3,6 +3,7 @@
 #import "notes.typ": template-notes
 #import "figures.typ": template-figures
 #import "layout.typ": full-width, margin-note
+#import "links.typ": template-links
 
 #let make-header(links) = html.header(
   if links != none {
@@ -40,21 +41,7 @@
   show: template-refs
   show: template-notes
   show: template-figures
-
-  // Intercept link rendering to open external/PDF links in new tab
-  show link: it => {
-    if type(it.dest) == str and (it.dest.starts-with("http") or it.dest.ends-with(".pdf")) {
-      html.a(
-        href: it.dest,
-        target: "_blank",
-        rel: ("noopener", "noreferrer"),
-        it.body,
-      )
-    } else {
-      // Internal link or non-string target, keep default behavior
-      it
-    }
-  }
+  show: template-links
 
   set text(lang: lang)
 
