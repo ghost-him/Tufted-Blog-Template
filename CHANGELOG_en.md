@@ -4,16 +4,16 @@
 
 Development updates will be recorded here.
 
-- feat: open external links and PDF links in new tabs (#15, @yanwenwang24)
+- feat: open external links and PDF links in new tabs ([#15](https://github.com/Yousa-Mirage/Tufted-Blog-Template/pull/15), [@yanwenwang24](https://github.com/yanwenwang24))
 
 ## v0.5.0
 
-- feat: optimize sidebar display on mobile (#14), adding a gray background to sidebar content, and:
+- feat: optimize sidebar display on mobile ([#14](https://github.com/Yousa-Mirage/Tufted-Blog-Template/issues/14)), adding a gray background to sidebar content, and:
   - `footnote` is collapsed by default on mobile and can be expanded by clicking the number
   - `marginnote`, `figure-caption` are expanded by default on mobile
 - style: slightly reduce the top and bottom margins of the `article` element
-- fix: resolve issue where inline math was affected by `p { text-indent: 2em; }` (#12)
-- fix: fix unnecessary scrollbar when content height is insufficient (#13)
+- fix: resolve issue where inline math was affected by `p { text-indent: 2em; }` ([#12](https://github.com/Yousa-Mirage/Tufted-Blog-Template/issues/12))
+- fix: fix unnecessary scrollbar when content height is insufficient ([#13](https://github.com/Yousa-Mirage/Tufted-Blog-Template/issues/13))
 - fix: correct display position of math on mobile
 - fix: prevent images from being stretched and not centered on mobile
 
