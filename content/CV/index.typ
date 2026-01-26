@@ -1,5 +1,8 @@
 #import "../index.typ": template, tufted
-#show: template.with(title: "Edward R. Tufte")
+#show: template.with(
+  title: "Edward R. Tufte",
+  description: "CV of Edward R. Tufte",
+)
 #import "@preview/citegeist:0.2.0": load-bibliography
 
 = Edward R. Tufte
