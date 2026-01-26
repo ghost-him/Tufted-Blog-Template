@@ -31,7 +31,7 @@
 
   // Open Graph
 
-  let auto-og-type = if page-path == "" or page-path == "/" {
+  let auto-og-type = if page-path == none or page-path == "" or page-path == "/" {
     "website"
   } else {
     "article"
