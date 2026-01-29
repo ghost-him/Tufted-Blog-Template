@@ -4,17 +4,7 @@
 #import "figures.typ": template-figures
 #import "layout.typ": full-width, margin-note
 #import "links.typ": template-links
-#import "seo.typ": seo-tags
-
-#let make-header(links) = html.header(
-  if links.len() > 0 {
-    html.nav(
-      for (href, title) in links {
-        html.a(href: href, title)
-      },
-    )
-  },
-)
+#import "metadata.typ": metadata
 
 /// Tufted 博客模板的主包装函数。
 ///
@@ -28,22 +18,23 @@
   description: "",
   lang: "zh",
   date: none,
-
-  // SEO
+  website-title: "",
   website-url: none,
+
+  // For SEO
   image-path: none,
 
-  // Feed-RSS
-  website-title: "",
+  // For RSS
   feed-dir: (),
 
-  // Custom header and footer elements
+  // Custom header and footer
   header-elements: (),
   footer-elements: (),
 
-  // Custom CSS and JS
+  // Custom CSS and JS Scripts
   css: ("/assets/custom.css",),
   js-scripts: (),
+
   content,
 ) = {
   // Apply styling
@@ -60,37 +51,17 @@
     {
       // Head
       html.head({
-        html.meta(charset: "utf-8")
-        html.meta(name: "viewport", content: "width=device-width, initial-scale=1")
-        html.meta(name: "generator", content: "Typst")
-
-        html.title(title)
-        html.link(rel: "icon", href: "/assets/favicon.ico")
-
-        if type(date) == datetime {
-          html.meta(name: "date", content: date.display())
-        } else if type(date) == str {
-          html.meta(name: "date", content: date)
-        }
-
-        if feed-dir != none and feed-dir.len() > 0 {
-          let rss-title = if website-title != "" { website-title } else { title }
-          html.link(
-            rel: "alternate",
-            type: "application/rss+xml",
-            href: "/feed.xml",
-            title: rss-title + " RSS Feed"
-          )
-        }
-
-        // SEO
-        seo-tags(
+        // All metadata
+        metadata(
           title: title,
           author: author,
           description: description,
-          site-url: website-url,
-          page-path: sys.inputs.at("page-path", default: none),
+          lang: lang,
+          date: date,
+          website-title: website-title,
+          website-url: website-url,
           image-path: image-path,
+          feed-dir: feed-dir,
         )
 
         // load CSS
@@ -131,7 +102,13 @@
         )
 
         // Add website navigation
-        make-header(header-links)
+        if links.len() > 0 {
+          html.nav(
+            for (href, title) in links {
+              html.a(href: href, title)
+            },
+          )
+        }
 
         // Main content
         html.article(
