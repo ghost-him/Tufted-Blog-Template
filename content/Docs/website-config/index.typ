@@ -61,7 +61,7 @@
 SEO (Search Engine Optimization，搜索引擎优化) 参数用于优化网站在搜索引擎中的可见性。模板提供以下参数（均为可选）：
 
 - `website-url` - 网站的根 URL，用于生成绝对链接
-- `image-path` - 网站的默认图片路径，用于生成 Open Graph 图片
+- `image-path` - 网站的默认图片路径，用于生成 Open Graph 图片（相对路径或网络资源均可）
 
 一旦设置了 `website-url`，构建脚本会自动为每个页面生成准确的绝对链接，确保 SEO 友好。
 
