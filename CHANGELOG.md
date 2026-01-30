@@ -13,14 +13,14 @@
 - 功能：在新标签页中打开外部链接和 PDF 链接（[#15](https://github.com/Yousa-Mirage/Tufted-Blog-Template/pull/15), [@yanwenwang24](https://github.com/yanwenwang24)）
 - 功能：增加了丰富的 SEO 元数据支持，具体内容见[网站配置](https://tufted-blog.pages.dev/Docs/website-config/)（[#16](https://github.com/Yousa-Mirage/Tufted-Blog-Template/issues/16), [#17](https://github.com/Yousa-Mirage/Tufted-Blog-Template/pull/17), [@yanwenwang24](https://github.com/yanwenwang24)）
 - 功能：增加了 RSS 订阅支持，具体内容见[网站配置](https://tufted-blog.pages.dev/Docs/website-config/)（[#19](https://github.com/Yousa-Mirage/Tufted-Blog-Template/pull/19), [@ghost-him](https://github.com/ghost-him)）
-- *BREAKING*：现在应该在 `config.typ` 中使用 `website-title` 参数来设置网站标题，对于每个页面的标题，仍然使用 `title` 参数
+- **BREAKING**：现在应该在 `config.typ` 中使用 `website-title` 参数来设置网站标题，对于每个页面的标题，仍然使用 `title` 参数
 - 样式：统一了 `table` 和 `figure>table` 的显示效果，实现了居中和自动列宽
 - 修复：强制构建时未清理旧文件的问题
 - 重构：将最低支持的 Python 版本更新至 3.10
 - 重构：调整了 `tufted-lib/tufted.typ` 中的 `tufted-web` 模板函数
   - 将默认 CSS 与 JS 硬编码在函数内部，参数只用来接收自定义文件
   - 在函数内部将`icon` 硬编码为 `/assets/favicon.ico`
-  - **BERAKING：**移除了 `icon`、`page-path` 参数，`lang` 默认值改为 `zh`
+  - **BERAKING**：移除了 `icon`、`page-path` 参数，`lang` 默认值改为 `zh`
 
 ## v0.5.0
 
