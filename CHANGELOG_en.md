@@ -13,14 +13,14 @@ Development updates will be recorded here.
 - feat: open external links and PDF links in new tabs ([#15](https://github.com/Yousa-Mirage/Tufted-Blog-Template/pull/15), [@yanwenwang24](https://github.com/yanwenwang24))
 - feat: add rich SEO metadata support, see [website configuration](https://tufted-blog.pages.dev/Docs/website-config-en/) ([#16](https://github.com/Yousa-Mirage/Tufted-Blog-Template/issues/16), [#17](https://github.com/Yousa-Mirage/Tufted-Blog-Template/pull/17), [@yanwenwang24](https://github.com/yanwenwang24))
 - feat: add RSS subscription support, see [website configuration](https://tufted-blog.pages.dev/Docs/website-config-en/) ([#19](https://github.com/Yousa-Mirage/Tufted-Blog-Template/pull/19), [@ghost-him](https://github.com/ghost-him))
-- *BREAKING*: use `website-title` parameter in `config.typ` to set the website title; use `title` parameter for individual page titles
+- **BREAKING**: use `website-title` parameter in `config.typ` to set the website title; use `title` parameter for individual page titles
 - style: unify the display of `table` and `figure>table`, centering and automatically adjusting column widths
 - fix: old files were not cleaned during forced builds
 - refactor: update minimum supported Python version to 3.10
 - refactor: `tufted-web` template functions in `tufted-lib/tufted.typ`
   - Hardcode the default CSS and JS inside the function, and the parameters are only used to receive custom files
   - Hardcode `icon` to `/assets/favicon.ico` inside the function
-  - **BERAKING:** Removed the `icon` and `page-path` parameters, and changed the default value of `lang` to `zh`
+  - **BERAKING**: Removed the `icon` and `page-path` parameters, and changed the default value of `lang` to `zh`
 
 ## v0.5.0
 
